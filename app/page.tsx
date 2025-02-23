@@ -1,6 +1,6 @@
 'use client';
 
-import { Logo } from '@/components/logo';
+import { Logo, LogoText } from '@/components/logo';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import {
@@ -13,6 +13,7 @@ import {
 import Link from 'next/link';
 
 export default function Home() {
+  const sendMail = () => window.open('mailto:admin@triipe.co.za', '_self');
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
@@ -20,9 +21,9 @@ export default function Home() {
         <div className="container flex h-16 items-center justify-between px-4">
           <Link className="flex items-center space-x-2 font-bold" href="/">
             <Logo />
-            <span>Triipe</span>
+            <LogoText />
           </Link>
-          <div className="hidden md:flex items-center space-x-6">
+          {/* <div className="hidden md:flex items-center space-x-6">
             <Link className="text-sm hover:text-sage" href="#services">
               Services
             </Link>
@@ -35,9 +36,12 @@ export default function Home() {
             <Link className="text-sm hover:text-sage" href="#contact">
               Contact
             </Link>
-          </div>
+          </div> */}
           <div className="flex items-center space-x-4">
-            <Button className="bg-gradient-to-r from-[#9edeb5] to-[#fdd895] text-black hover:from-[#9edeb5]/90 hover:to-[#fdd895]/90">
+            <Button
+              className="bg-gradient-to-r from-[#9edeb5] to-[#fdd895] text-black hover:from-[#9edeb5]/90 hover:to-[#fdd895]/90"
+              onClick={sendMail}
+            >
               Get in Touch
             </Button>
           </div>
@@ -184,16 +188,19 @@ export default function Home() {
               development to SaaS products, we're your technology partner.
             </p>
             <div className="flex justify-center space-x-4">
-              <Button className="bg-gradient-to-r from-[#9edeb5] to-[#fdd895] text-lg text-black hover:from-[#9edeb5]/90 hover:to-[#fdd895]/90">
+              <Button
+                className="bg-gradient-to-r from-[#9edeb5] to-[#fdd895] text-lg text-black hover:from-[#9edeb5]/90 hover:to-[#fdd895]/90"
+                onClick={sendMail}
+              >
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button
+              {/* <Button
                 variant="outline"
                 className="border-white/10 text-lg text-white hover:bg-white/10"
               >
                 View Our Work
-              </Button>
+              </Button> */}
             </div>
           </motion.div>
         </div>
@@ -261,7 +268,7 @@ export default function Home() {
       </section>
 
       {/* Portfolio Section */}
-      <section
+      {/* <section
         id="portfolio"
         className="relative z-10 border-t border-white/10 bg-black/50 py-24"
       >
@@ -275,21 +282,18 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
-            {/* Add your portfolio items here */}
-            {/* This is a placeholder structure */}
             <div className="group relative overflow-hidden rounded-2xl border border-white/10">
               <div className="aspect-video bg-gradient-to-br from-purple/20 to-[#9edeb5]/20 p-8">
                 <h3 className="text-xl font-bold">Project Name</h3>
                 <p className="mt-2 text-gray-400">Brief project description</p>
               </div>
             </div>
-            {/* Add more portfolio items */}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section */}
-      <section
+      {/* <section
         id="about"
         className="relative z-10 border-t border-white/10 bg-black py-24"
       >
@@ -303,10 +307,9 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
-            {/* Add team member cards here */}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section
@@ -314,7 +317,7 @@ export default function Home() {
         className="relative z-10 border-t border-white/10 bg-black py-24"
       >
         <div className="container px-4">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-gradient-to-r from-purple/50 to-[#9edeb5]/50 p-8 text-center backdrop-blur-sm md:p-12 lg:p-16">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-gradient-to-r from-[#34182C] to-[#9edeb5]/50 p-8 text-center backdrop-blur-sm md:p-12 lg:p-16">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
               Start Your Project
             </h2>
@@ -335,7 +338,10 @@ export default function Home() {
                 <span>Transparent pricing and timeline</span>
               </li>
             </ul>
-            <Button className="mt-8 bg-gradient-to-r from-[#9edeb5] to-[#fdd895] text-lg text-black hover:from-[#9edeb5]/90 hover:to-[#fdd895]/90">
+            <Button
+              className="mt-8 bg-gradient-to-r from-[#9edeb5] to-[#fdd895] text-lg text-black hover:from-[#9edeb5]/90 hover:to-[#fdd895]/90"
+              onClick={sendMail}
+            >
               Schedule a Call
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -348,13 +354,13 @@ export default function Home() {
         <div className="container flex flex-col items-center justify-between space-y-4 px-4 md:flex-row md:space-y-0">
           <div className="flex items-center space-x-2">
             <Logo />
-            <span className="font-bold">Triipe</span>
+            <LogoText />
           </div>
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Triipe. All rights reserved.
+            © {new Date().getFullYear()} Triipe (Pty) Ltd. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <Link
+            {/* <Link
               className="text-sm text-gray-400 hover:text-[#9edeb5]"
               href="#"
             >
@@ -365,7 +371,7 @@ export default function Home() {
               href="#"
             >
               Terms
-            </Link>
+            </Link> */}
           </div>
         </div>
       </footer>
