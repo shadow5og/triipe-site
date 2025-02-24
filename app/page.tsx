@@ -18,7 +18,7 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur-xl">
-        <div className="container flex h-16 items-center justify-between px-4">
+        <nav className="container flex h-16 items-center justify-between px-4">
           <Link className="flex items-center space-x-2 font-bold" href="/">
             <Logo />
             <LogoText />
@@ -45,7 +45,7 @@ export default function Home() {
               Get in Touch
             </Button>
           </div>
-        </div>
+        </nav>
       </header>
 
       {/* Hero Section */}
@@ -162,13 +162,13 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
-            className="absolute -left-1/4 top-1/4 h-96 w-96 rounded-full bg-coral/30 blur-3xl"
+            className="absolute -left-60 top-1/4 h-96 w-96 rounded-full bg-coral/30 blur-3xl"
           />
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 0.5 }}
-            className="absolute -right-1/4 top-1/2 h-96 w-96 rounded-full bg-yellow/30 blur-3xl"
+            className="absolute -right-60 top-1/2 h-96 w-96 rounded-full bg-yellow/30 blur-3xl"
           />
         </div>
 
